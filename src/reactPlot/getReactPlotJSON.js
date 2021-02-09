@@ -19,14 +19,14 @@ function getData(x, y) {
  * @param {object} [options.xAxis]
  * @param {object} [options.yAxis]
  * @param {object} [options.series]
- * @param {object} [options.dimentions]
+ * @param {object} [options.dimensions]
  */
 export function getReactPlotJSON(analyses, query, options = {}) {
   const {
     xAxis: xAxisOptions = {},
     yAxis: yAxisOptions = { labelSpace: 40 },
     series: seriesOptions = { displayMarker: true },
-    dimentions = { width: 550, height: 500 },
+    dimensions = { width: 550, height: 500 },
   } = options;
   let series = [];
   let meta = [];
@@ -66,7 +66,7 @@ export function getReactPlotJSON(analyses, query, options = {}) {
   return {
     series,
     axes: [xAxis, yAxis],
-    dimentions,
+    dimensions,
     meta,
   };
 }
